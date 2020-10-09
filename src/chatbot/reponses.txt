@@ -1,2 +1,5 @@
 hello - Hi there! How are you ?
 bye - Goodbye!
+Tao co dep trai khong may - Yes, May rat dep trai
+Dit me may luon con cho nay - Dit me may luon day con cho
+Mu or Liverpool - Mu number one, liver number two <3

@@ -61,7 +61,7 @@ public class ChatBot {
 		String array[];
 		for(String reponseLine: reponses) {
 			if(reponseLine != null) {
-				array = reponseLine.split("-");
+				array = reponseLine.split(" - ");
 				tag = array[0];
 				reponse = array[1];
 				if(tag.compareToIgnoreCase(userInput) == 0) {
@@ -70,5 +70,22 @@ public class ChatBot {
 			}
 		}
 		return "No Reponse....";
+	}
+//	Run
+	public static void main(String[] args) throws Exception{
+		String userInput, reponse;
+		String filename = "./src/chatbot/reponses.txt";
+		int lines = getLines(filename);
+		String reponses[] = getAllReponseArray(filename, lines);
+		displayMenu(true);
+		do {
+			userInput = getUserInput();
+			reponse = getReponses(reponses, userInput);
+			System.out.println("ChatBot: " + reponse);
+			if(!userInput.equals("bye")) {
+				displayMenu(false);
+			}
+		}while(!userInput.equals("Bye"));
+		
 	}
 }
